@@ -1,0 +1,8 @@
+[submodule "modules/JasmyCoin"]
+    path = modules/JasmyCoin
+    url = https://github.com/cryptomx1/JasmyCoin.git
+    branch = main
+[submodule "modules/janction-cli"]
+    path = modules/janction-cli
+    url = https://github.com/cryptomx1/janction-cli.git
+    branch = main
