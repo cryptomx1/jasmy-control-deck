@@ -1,0 +1,25 @@
+name: Doctor
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify-onboarding:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo (with submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Verify submodules exist
+        run: |
+          test -d modules/JasmyCoin
+          test -d modules/janction-cli
+
+      - name: Check required files
+        run: |
+          for file in README.md .gitmodules tools/setup.sh tools/sync-submodules.sh; do
+            test -s "$file"
+          done
