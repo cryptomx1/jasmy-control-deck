@@ -1,11 +1,17 @@
 import React from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Jasmy Control Deck</h1>
-      <p>Welcome to your Jasmy-focused dashboard.</p>
-    </div>
+    <>
+      <Navbar />
+      <main className="main-content">
+        <h2>Welcome to Jasmy Control Deck</h2>
+        <p>Your data, your power. Explore how the Jasmy platform empowers you with personal data control and secure interactions.</p>
+      </main>
+      <Footer />
+    </>
   );
 }
 
